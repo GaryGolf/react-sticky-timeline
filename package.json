@@ -45,6 +45,7 @@
     "react-waypoint": ">=8.0.2"
   },
   "dependencies": {
+    "moment": "^2.22.2",
     "react-sticky-list": "^0.1.0"
   }
 }
