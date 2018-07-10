@@ -43,5 +43,8 @@
   "peerDependencies": {
     "react": ">=16.4.1",
     "react-waypoint": ">=8.0.2"
+  },
+  "dependencies": {
+    "react-sticky-list": "^0.1.0"
   }
 }
