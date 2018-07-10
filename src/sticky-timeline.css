@@ -1,0 +1,24 @@
+.sticky-timeline {
+  height: 400px;
+  width: 100px;
+  position: relative;
+  margin: 0 auto;
+  overflow: scroll;
+}
+
+.sticky-month {
+  color: navy;
+}
+
+.sticky-date {
+  margin-left: .5rem;
+  cursor: pointer;
+}
+
+.sticky-date:hover {
+  color: red;
+}
+
+.__active {
+  color: yellow;
+}
