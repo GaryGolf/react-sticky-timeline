@@ -11,7 +11,7 @@ const prodCilentConfig = {
   entry: './src/sticky-timeline.tsx',
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, '/dist'),
+    path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'commonjs2'
   },
   
@@ -34,7 +34,7 @@ const prodCilentConfig = {
 
   externals: {
     'react': 'react',
-    'react-waypoint': 'react-waypoint'
+    'moment': 'moment'
   }
 };
 

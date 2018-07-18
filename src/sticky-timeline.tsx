@@ -2,29 +2,31 @@ import * as React from 'react';
 import StickyDate from './sticky-date';
 import StickyList from 'react-sticky-list';
 import * as moment from 'moment';
-import * as styles from './sticky-timeline.css';
+import { Moment } from 'moment';
 
-export type Moment = moment.Moment;
-export type DateType = string | number | Date | Moment;
-export type DateFormat = 'Date' | 'Moment' | 'number' | 'string';
+import { StickyTimelineProps, StickyElement,  DateType} from './index'
 
-export interface StickyElement {
-  idx: number;
-  position: string;
-  component: JSX.Element;
-}
+// export type Moment = moment.Moment;
+// export type DateType = string | number | Date | Moment;
+// export type DateFormat = 'Date' | 'Moment' | 'number' | 'string';
 
-export interface StickyPosition {
-  idx: number;
-  position: string;
-}
+// export interface StickyElement {
+//   idx: number;
+//   position: string;
+//   component: JSX.Element;
+// }
 
-export interface StickyTimelineProps  {
-  value: DateType;
-  monthCount?: number;
-  type?: DateFormat;
-  onChange: (date:DateType) => void;
-}
+// export interface StickyPosition {
+//   idx: number;
+//   position: string;
+// }
+
+// export interface StickyTimelineProps  {
+//   value: DateType;
+//   monthCount?: number;
+//   type?: DateFormat;
+//   onChange: (date:DateType) => void;
+// }
 
 // interface State {
 //   elements: StickyElement[];
@@ -32,7 +34,7 @@ export interface StickyTimelineProps  {
 //   isBottom: boolean;
 // }
 
-export class StickyTimeline extends React.Component<StickyTimelineProps, null> {
+export default class StickyTimeline extends React.PureComponent<StickyTimelineProps, null> {
 
   static defaultProps = { type: 'Date', monthCount: 6 }
   private container: HTMLDivElement;
@@ -84,10 +86,8 @@ export class StickyTimeline extends React.Component<StickyTimelineProps, null> {
         <StickyList>
           {calendar}
         </StickyList>
-        <style>{styles.toString()}</style>
       </div>
     )
   }
 } 
 
-export default StickyTimeline;
