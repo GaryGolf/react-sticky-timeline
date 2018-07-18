@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const mode = process.env.NODE_ENV;
@@ -8,10 +8,10 @@ const PRODUCTION = mode == 'production';
 
 const prodCilentConfig = {
   mode: 'production',
-  entry: './src/index.ts',
+  entry: './src/sticky-timeline.tsx',
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '/dist'),
     libraryTarget: 'commonjs2'
   },
   
@@ -24,17 +24,18 @@ const prodCilentConfig = {
   module: {
     rules: [
       { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
-      { test: /\.css$/, loader: 'css-loader' }
     ]
   },
 
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new UglifyJsPlugin(),
-    new webpack.DefinePlugin({
-      PRODUCTION: JSON.stringify(true)
-    })
-  ]
+    new CopyWebpackPlugin([{ from: './src/index.d.ts', to: './' }])
+  ],
+
+  externals: {
+    'react': 'react',
+    'react-waypoint': 'react-waypoint'
+  }
 };
 
 module.exports = prodCilentConfig;
