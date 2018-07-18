@@ -5,9 +5,9 @@
     "jsx": "react",
     "outDir": "../dist/",
     "target": "es5",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "lib": ["esnext", "dom"]
   },
   "include": ["./src/**/*"],
-  "exclude": ["../../dist", "../../node_modules"]
+  "exclude": ["../dist", "../node_modules"]
 }
