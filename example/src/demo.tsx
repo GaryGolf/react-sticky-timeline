@@ -29,10 +29,6 @@ export default class Demo extends React.PureComponent<Props, {}> {
           <div>asfgfgaasfgasfg</div>
           <div>asfgfgaasfgasfg</div>
           <div>asfgfgaasfgasfg</div>
-          <div>asfgfgaasfgasfg</div>
-          <div>asfgfgaasfgasfg</div>
-          <div>asfgfgaasfgasfg</div>
-          <div>asfgfgaasfgasfg</div>
           <header>12</header>
           <div>asfgfgaasfgasfg</div>
           <div>asfgfgaasfgasfg</div>
