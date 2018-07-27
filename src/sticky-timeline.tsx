@@ -90,4 +90,3 @@ export default class StickyTimeline extends React.PureComponent<StickyTimelinePr
     )
   }
 } 
-
