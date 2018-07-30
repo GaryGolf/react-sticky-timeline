@@ -1,38 +1,10 @@
 import * as React from 'react';
+import { Moment } from 'moment';
+import * as moment from 'moment';
 import StickyDate from './sticky-date';
 import StickyList from 'react-sticky-list';
-import * as moment from 'moment';
-import { Moment } from 'moment';
 
-import { StickyTimelineProps, StickyElement,  DateType} from './index'
-
-// export type Moment = moment.Moment;
-// export type DateType = string | number | Date | Moment;
-// export type DateFormat = 'Date' | 'Moment' | 'number' | 'string';
-
-// export interface StickyElement {
-//   idx: number;
-//   position: string;
-//   component: JSX.Element;
-// }
-
-// export interface StickyPosition {
-//   idx: number;
-//   position: string;
-// }
-
-// export interface StickyTimelineProps  {
-//   value: DateType;
-//   monthCount?: number;
-//   type?: DateFormat;
-//   onChange: (date:DateType) => void;
-// }
-
-// interface State {
-//   elements: StickyElement[];
-//   isTop: boolean;
-//   isBottom: boolean;
-// }
+import { StickyTimelineProps,  DateType} from './index'
 
 export default class StickyTimeline extends React.PureComponent<StickyTimelineProps, null> {
 
