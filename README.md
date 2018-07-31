@@ -16,7 +16,7 @@ import  StickyTimeline from 'react-sticky-timeline';
   return (
     <StickyTimeline
       value={this.props.date}
-      type="Date" // optional "Date" || "Moment" || "string" || "number
+      type="Date" // optional "Date" || "string" || "number
       monthCount={4} // optional default 6
       onChange={this.handleDateChange}
     />
