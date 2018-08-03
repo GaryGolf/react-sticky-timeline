@@ -24,7 +24,6 @@ import  StickyTimeline from 'react-sticky-timeline';
 ```
 
 #### Attributes
-  value : currebt date
 
 ## License
 
